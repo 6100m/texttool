@@ -8,6 +8,8 @@ setlocal enabledelayedexpansion
 set count1=0
 set count2=0
 set count3=0
+set count4=0
+set count5=0
 ECHO V5
 ECHO ...............................................
 ECHO PRESS 1 or 2 to select your task, or 3 to EXIT, or 4 to view credits.
@@ -45,24 +47,24 @@ goto mode3
 :mode2
 REM Now we read the lines of text
 for /f "tokens=*" %%x in (lines_of_text.txt) do (
-    set /a count1+=1
-    set var1[!count1!]=%%x
+    set /a count3+=1
+    set var1[!count3!]=%%x
 )
 REM At this point, each line is loaded into a variable, specified by a integer ID
 REM Thanks to the lovely people over at stackoverflow for the for statement I used for this
 REM Store the color arguments in color_definitions.txt
 for /f "tokens=*" %%x in (color_defintions.txt) do (
-    set /a count2+=1
-    set var2[!count2!]=%%x
+    set /a count4+=1
+    set var2[!count4!]=%%x
 )
 REM Fill up a text file with the first line being the number of times you want it to run, the second line being 1, and the third line being the number of lines in lines_of_text.txt
 REM SMH, this is so much faster than in Python or any other lanugage for that matter
 REM -6100m
 for /f "tokens=*" %%x in (config_data.txt) do (
-    set /a count3+=1
-    set var3[!count3!]=%%x
+    set /a count5+=1
+    set var3[!count5!]=%%x
 )
-for /L %a in (%var1_1%,%var1_2%,%var1_3%) Do color !var2[!%a]! && echo !var1[!count2!]!
+for /L %a in (%var1_1%,%var1_2%,%var1_3%) Do color !var2[!%a]! && echo !var1[!%a]]!
 goto mode3
 :mode3
 cls
