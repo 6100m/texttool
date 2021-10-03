@@ -10,7 +10,8 @@ set count2=0
 set count3=0
 set count4=0
 set count5=0
-ECHO V5
+ECHO V6
+ECHO BY GLOOM
 ECHO ...............................................
 ECHO PRESS 1 or 2 to select your task, or 3 to EXIT, or 4 to view credits.
 ECHO ...............................................
